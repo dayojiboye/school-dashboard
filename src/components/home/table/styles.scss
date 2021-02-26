@@ -1,0 +1,62 @@
+.table_wrapper {
+  width: var(--full);
+  margin-top: 55px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .student_table {
+    width: var(--full);
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th,
+    td {
+      white-space: nowrap;
+      text-align: left;
+      padding-right: 32px;
+
+      &:last-child {
+        text-align: center;
+        padding-right: 0;
+      }
+    }
+
+    th {
+      padding-bottom: 32px;
+    }
+
+    td {
+      padding-bottom: 19px;
+      line-height: 1.6;
+
+      &:first-child {
+        font-weight: bold;
+      }
+
+      &:nth-child(6) {
+        display: flex;
+        align-items: baseline;
+
+        &::before {
+          content: '';
+          width: 12px;
+          height: 12px;
+          background: url('../../../assets/icons/check.svg') no-repeat center;
+          background-size: cover;
+          flex-shrink: 0;
+          margin-right: 7px;
+        }
+      }
+
+      &:last-child {
+        color: var(--dark-green);
+      }
+    }
+  }
+}

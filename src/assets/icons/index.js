@@ -1,0 +1,10 @@
+export { ReactComponent as DashboardSvg } from './dashboard.svg';
+export { ReactComponent as StudentSvg } from './reading-book.svg';
+export { ReactComponent as ParentSvg } from './family.svg';
+export { ReactComponent as BlackboardSvg } from './blackboard.svg';
+export { ReactComponent as CoursesSvg } from './online-course.svg';
+export { ReactComponent as BellSvg } from './bell.svg';
+export { ReactComponent as EnvelopeSvg } from './envelope.svg';
+export { ReactComponent as ChevronDownSvg } from './chevron-down.svg';
+export { ReactComponent as SettingsSvg } from './settings.svg';
+export { ReactComponent as PlusSvg } from './plus.svg';

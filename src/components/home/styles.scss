@@ -1,0 +1,143 @@
+.home {
+  width: var(--full);
+
+  &__heading {
+    width: var(--full);
+
+    h1 {
+      display: inline-block;
+    }
+  }
+
+  &__data {
+    width: var(--full);
+    margin-top: 45px;
+    background: var(--white);
+    padding: 16px 20px 32px;
+    border-radius: var(--border-radius-mini);
+    box-shadow: var(--box-shadow);
+
+    ._data_actions {
+      width: var(--full);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      ._left,
+      ._right {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+      }
+
+      .dropdown_wrapper {
+        width: 150px;
+        margin-right: 16px;
+
+        &#_filter {
+          width: 100px;
+        }
+
+        button {
+          width: var(--full);
+          padding: 10px 0;
+          background: var(--input-fade-bg);
+          border: 0;
+          cursor: pointer;
+          border-radius: var(--border-radius-mini);
+          display: flex;
+          align-items: baseline;
+          justify-content: space-evenly;
+
+          span {
+            font-size: 0.9rem;
+            font-weight: 500;
+          }
+
+          svg {
+            width: 8px;
+            height: 8px;
+            flex-shrink: 0;
+          }
+        }
+      }
+
+      .data_search {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 300px;
+        margin-right: 16px;
+
+        &::before {
+          content: '';
+          width: 15px;
+          height: 15px;
+          background: url('../../assets/icons/search-interface-symbol2.svg')
+            no-repeat center;
+          background-size: cover;
+          flex-shrink: 0;
+          position: absolute;
+          left: 0;
+        }
+
+        input {
+          padding: 7px 27px;
+          border: 0;
+          width: var(--full);
+          border-bottom: 1px solid var(--fade-secondary);
+
+          &::placeholder {
+            color: var(--fade);
+          }
+        }
+      }
+
+      ._settings_btn,
+      ._plus_btn {
+        width: 40px;
+
+        button {
+          width: var(--full);
+          padding: 10px 0;
+          background: var(--input-fade-bg);
+          border: 0;
+          cursor: pointer;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+          }
+        }
+      }
+
+      ._plus_btn {
+        margin-left: 16px;
+
+        button {
+          background: var(--dark-green);
+
+          svg {
+            fill: var(--white);
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
