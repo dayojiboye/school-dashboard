@@ -40,7 +40,7 @@ const homePage = () => {
             </div>
 
             <div className="_plus_btn">
-              <button aria-label="settings">
+              <button aria-label="add new data">
                 <PlusSvg />
               </button>
             </div>

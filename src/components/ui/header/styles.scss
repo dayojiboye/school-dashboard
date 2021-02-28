@@ -7,10 +7,13 @@
   padding: 10px 32px;
   align-items: center;
   justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  position: relative;
 
   @media (max-width: 1271px) {
     width: var(--full);
     margin-top: 60px;
+    box-shadow: none;
   }
 
   @media (max-width: 659px) {
@@ -183,7 +186,7 @@
         border-radius: 100vh;
         width: var(--full);
         height: var(--full);
-        border: 2px solid gold;
+        border: 2px solid var(--goldish);
       }
     }
 

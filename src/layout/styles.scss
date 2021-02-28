@@ -48,6 +48,10 @@
   padding: 55px 32px;
   overflow-x: hidden;
 
+  &.white_bg {
+    background: var(--white);
+  }
+
   @media (max-width: 659px) {
     padding: 55px 20px;
   }

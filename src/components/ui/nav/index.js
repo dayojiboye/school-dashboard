@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { NavLink } from 'react-router-dom';
+
 import SkooleeoLogo from '../../../assets/images/skooleeo-logo.png';
 import KidImg from '../../../assets/images/kid1.jpg';
 
@@ -14,7 +16,7 @@ import {
 
 import './styles.scss';
 
-const nav = ({ open }) => {
+const Nav = ({ open }) => {
   return (
     <nav className={`nav ${open ? '_show' : ''}`}>
       <div className="nav__logo">
@@ -50,9 +52,9 @@ const nav = ({ open }) => {
           </li>
 
           <li>
-            <a href="/#" className="_active_link">
+            <NavLink exact to="/" activeClassName="_active_link">
               <StudentSvg /> <span>Students</span>
-            </a>
+            </NavLink>
           </li>
 
           <li>
@@ -83,6 +85,12 @@ const nav = ({ open }) => {
             <a href="/#">
               <BlackboardSvg /> <span>Examinations</span>
             </a>
+          </li>
+
+          <li>
+            <NavLink to="/cbt-examination" activeClassName="_active_link">
+              <BlackboardSvg /> <span>CBT Examinations</span>
+            </NavLink>
           </li>
 
           <li>
@@ -148,4 +156,4 @@ const nav = ({ open }) => {
   );
 };
 
-export default nav;
+export default Nav;

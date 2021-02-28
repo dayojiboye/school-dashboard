@@ -1,4 +1,4 @@
-.home {
+.cbt_exams {
   width: var(--full);
 
   &__heading {
@@ -9,15 +9,50 @@
     }
   }
 
+  &__tab {
+    width: var(--full);
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+
+    .cbt_courses,
+    .cbt_results {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &._active {
+        color: var(--dark-green);
+
+        &::after {
+          content: '';
+          background: var(--dark-green);
+          width: var(--full);
+          height: 2px;
+          position: absolute;
+          bottom: -7px;
+        }
+      }
+
+      button {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+      }
+    }
+
+    .cbt_courses {
+      margin-right: 35px;
+    }
+  }
+
   &__data {
     width: var(--full);
-    margin-top: 45px;
-    background: var(--white);
-    padding: 16px 20px 32px;
-    border-radius: var(--border-radius-mini);
-    box-shadow: var(--box-shadow);
+    margin-top: 70px;
 
-    ._data_actions {
+    .cbt_data_actions {
       width: var(--full);
       display: flex;
       align-items: center;
@@ -40,23 +75,19 @@
       }
 
       .dropdown_wrapper {
-        width: 150px;
+        width: 140px;
         margin-right: 16px;
-
-        &#_filter {
-          width: 100px;
-        }
 
         button {
           width: var(--full);
-          padding: 10px 0;
+          padding: 10px 16px;
           background: var(--input-fade-bg);
           border: 0;
           cursor: pointer;
           border-radius: var(--border-radius-mini);
           display: flex;
           align-items: baseline;
-          justify-content: space-evenly;
+          justify-content: space-between;
 
           span {
             font-size: 0.9rem;
@@ -75,7 +106,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        width: 300px;
+        width: 230px;
         margin-right: 16px;
 
         &::before {
@@ -91,7 +122,7 @@
         }
 
         input {
-          padding: 7px 27px;
+          padding: 7px 0px 7px 27px;
           border: 0;
           width: var(--full);
           border-bottom: 1px solid var(--fade-secondary);

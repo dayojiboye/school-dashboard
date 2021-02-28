@@ -9,6 +9,7 @@ import Layout from './layout';
 // pages
 
 import { HomePage } from './pages/home';
+import { CbtExamsPage } from './pages/cbtExams';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Layout>
         <Switch>
           <Route path="/" exact component={HomePage} />
+          <Route path="/cbt-examination" component={CbtExamsPage} />
         </Switch>
       </Layout>
     </>
