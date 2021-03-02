@@ -37,7 +37,9 @@ const table = () => {
                 </td>
 
                 <td>
-                  <span>{item.parent}</span>
+                  <span>
+                    {item.parent} ({item.parentRelationship})
+                  </span>
                 </td>
 
                 <td>
