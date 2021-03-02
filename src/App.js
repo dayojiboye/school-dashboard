@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 // layout
 
@@ -20,6 +20,7 @@ function App() {
           <Route path="/" exact component={HomePage} />
           <Route path="/cbt-examinations" component={CbtExamsPage} />
           <Route path="/examinations" component={ExamsPage} />
+          <Redirect to="/" />
         </Switch>
       </Layout>
     </>
