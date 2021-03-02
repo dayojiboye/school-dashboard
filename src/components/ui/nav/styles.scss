@@ -122,25 +122,12 @@
               position: absolute;
               left: 0;
             }
-
-            svg {
-              fill: var(--dark-green);
-
-              path {
-                fill: var(--dark-green);
-              }
-            }
           }
 
-          svg {
+          img {
             width: 23px;
             height: 23px;
             flex-shrink: 0;
-            fill: var(--text-primary);
-
-            path {
-              fill: var(--text-primary);
-            }
           }
 
           span {
@@ -159,11 +146,12 @@
           font-size: 1.1rem;
           cursor: pointer;
 
-          svg {
+          img {
             width: 23px;
             height: 23px;
             flex-shrink: 0;
-            fill: var(--text-primary);
+            object-fit: cover;
+            display: block;
           }
 
           span {

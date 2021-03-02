@@ -2,7 +2,8 @@ import React from 'react';
 
 import Dropdown from '../ui/dropdown';
 import Input from '../ui/input';
-import { SettingsSvg, PlusSvg } from '../../assets/icons';
+import { PlusSvg } from '../../assets/icons';
+import SettingsSvg from '../../assets/images/gear.png';
 import Results from './results';
 
 import './styles.scss';
@@ -45,7 +46,7 @@ const cbtExams = () => {
 
             <div className="_settings_btn">
               <button aria-label="settings">
-                <SettingsSvg />
+                <img src={SettingsSvg} alt="" />
               </button>
             </div>
 

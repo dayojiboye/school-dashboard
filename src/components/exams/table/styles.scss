@@ -1,0 +1,84 @@
+.exams_table_wrapper {
+  margin-top: 55px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  width: 40%;
+  flex-shrink: 0;
+
+  @media (max-width: 659px) {
+    width: var(--full);
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .exams_table {
+    width: 90%;
+    border-spacing: 0px 7px;
+    // table-layout: fixed;
+    min-width: 350px;
+
+    @media (max-width: 659px) {
+      width: var(--full);
+    }
+
+    th,
+    td {
+      width: auto;
+      white-space: nowrap;
+      text-align: left;
+      padding-left: 16px;
+      padding-right: 24px;
+
+      &:last-child {
+        width: 110px;
+        padding-right: 0;
+      }
+    }
+
+    th {
+      padding-bottom: 20px;
+    }
+
+    .exams_tr {
+      cursor: pointer;
+
+      &:nth-of-type(3) {
+        background: var(--light-green);
+      }
+    }
+
+    td {
+      padding-bottom: 16px;
+      line-height: 1.6;
+      padding-top: 16px;
+      border: 1px solid var(--fade-secondary);
+      border-radius: var(--border-radius-mini);
+
+      &:first-of-type {
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &:last-of-type {
+        border-left: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      &:nth-of-type(2) {
+        border: 0;
+        border-top: 1px solid var(--fade-secondary);
+        border-bottom: 1px solid var(--fade-secondary);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+      }
+    }
+  }
+}

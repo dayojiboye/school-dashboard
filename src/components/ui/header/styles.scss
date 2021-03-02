@@ -78,7 +78,7 @@
     }
 
     .mail_notification {
-      border-right: 1px solid var(--fade);
+      border-right: 1px solid var(--fade-secondary);
       padding-right: 27px;
       height: var(--full);
       display: flex;
@@ -106,9 +106,10 @@
         align-items: center;
         justify-content: center;
 
-        svg {
-          fill: var(--text-primary);
+        > img {
           height: var(--full);
+          display: block;
+          object-fit: cover;
         }
 
         > span {
@@ -186,7 +187,6 @@
         border-radius: 100vh;
         width: var(--full);
         height: var(--full);
-        border: 2px solid var(--goldish);
       }
     }
 

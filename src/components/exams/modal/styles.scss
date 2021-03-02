@@ -1,0 +1,230 @@
+.exams_modal {
+  margin-left: auto;
+  margin-top: 62px;
+  flex-shrink: 0;
+  width: 50%;
+
+  @media (max-width: 659px) {
+    width: var(--full);
+  }
+
+  > form {
+    width: var(--full);
+
+    .top_wrapper {
+      background: var(--white);
+      padding: 32px;
+      width: 80%;
+      min-width: 280px;
+      position: relative;
+      border-radius: var(--border-radius-mini);
+      box-shadow: var(--box-shadow);
+
+      @media (max-width: 659px) {
+        width: var(--full);
+        min-width: unset;
+      }
+
+      @media (max-width: 319px) {
+        padding: 32px 16px;
+      }
+
+      &__heading {
+        margin-bottom: 32px;
+        margin-left: 16px;
+      }
+
+      .cancel_btn {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 37px;
+        right: 16px;
+
+        > button {
+          width: var(--full);
+          height: var(--full);
+          display: block;
+          padding: 0;
+          border: 0;
+          border-radius: 100vh;
+          cursor: pointer;
+
+          > svg {
+            width: var(--full);
+            height: var(--full);
+            display: block;
+            fill: #9f9fa6;
+          }
+        }
+      }
+
+      &__table {
+        width: var(--full);
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        ._headings {
+          width: var(--full);
+          padding-left: 16px;
+          padding-bottom: 16px;
+          display: flex;
+
+          span {
+            font-weight: 600;
+
+            &:first-child {
+              min-width: 100px;
+            }
+          }
+        }
+
+        .form_group {
+          padding: 5px 7px 5px 16px;
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          min-width: 320px;
+
+          &._checked {
+            background: var(--goldish-light);
+            border-radius: var(--border-radius-mini);
+          }
+
+          > span {
+            &:first-child {
+              font-weight: 600;
+              min-width: 100px;
+            }
+
+            &:nth-child(2) {
+              min-width: 150px;
+            }
+          }
+
+          .input_wrapper {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: flex-end;
+
+            input {
+              width: 40px;
+              height: 40px;
+              background: var(--input-fade-bg);
+              border-radius: var(--border-radius-mini);
+              transition: none;
+              cursor: pointer;
+              position: relative;
+              border: 0;
+
+              &:checked {
+                color: var(--white);
+                font-weight: 600;
+                background: var(--goldish);
+
+                &::after {
+                  content: '';
+                  left: 16px;
+                  top: 12px;
+                  position: absolute;
+                  width: 7px;
+                  height: 15px;
+                  border: solid var(--white);
+                  border-width: 0 3px 3px 0;
+                  transform: rotate(45deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bottom_wrapper {
+      width: 80%;
+      min-width: 280px;
+      display: flex;
+      align-items: center;
+      margin-top: 32px;
+
+      @media (max-width: 659px) {
+        width: var(--full);
+        margin-top: 40px;
+      }
+
+      @media (max-width: 319px) {
+        flex-direction: column;
+        justify-content: center;
+        min-width: auto;
+      }
+
+      .select_wrapper {
+        width: 60%;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 319px) {
+          width: var(--full);
+        }
+
+        &::after {
+          content: '';
+          height: 10px;
+          width: 10px;
+          background: url('../../../assets/icons/caret-down.svg') no-repeat
+            center;
+          background-size: cover;
+          display: block;
+          position: absolute;
+          right: 16px;
+          pointer-events: none;
+          flex-shrink: 0;
+        }
+
+        select {
+          border: 0;
+          background: var(--input-fade-bg);
+          padding: 12px;
+          border-radius: var(--border-radius-mini);
+        }
+      }
+
+      .form_submit_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: var(--full);
+        flex: 1;
+        margin-left: 40px;
+
+        @media (max-width: 319px) {
+          width: var(--full);
+          margin-left: 0;
+          margin-top: 16px;
+        }
+
+        > button {
+          border: 0;
+          padding: 12px;
+          display: block;
+          width: var(--full);
+          background: var(--dark-green);
+          color: var(--white);
+          cursor: pointer;
+          border-radius: var(--border-radius-mini);
+        }
+      }
+    }
+  }
+}

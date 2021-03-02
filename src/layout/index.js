@@ -53,11 +53,7 @@ const Layout = ({ children }) => {
 
       <Header />
 
-      <main
-        className={`main ${
-          location.pathname === '/cbt-examination' ? 'white_bg' : ''
-        }`}
-      >
+      <main className={`main ${location.pathname !== '/' ? 'white_bg' : ''}`}>
         {children}
       </main>
     </>

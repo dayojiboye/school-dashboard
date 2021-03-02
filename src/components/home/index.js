@@ -3,7 +3,8 @@ import React from 'react';
 import Dropdown from '../ui/dropdown';
 import Input from '../ui/input';
 import Table from './table';
-import { SettingsSvg, PlusSvg } from '../../assets/icons';
+import { PlusSvg } from '../../assets/icons';
+import SettingsSvg from '../../assets/images/gear.png';
 
 import './styles.scss';
 
@@ -35,7 +36,7 @@ const homePage = () => {
 
             <div className="_settings_btn">
               <button aria-label="settings">
-                <SettingsSvg />
+                <img src={SettingsSvg} alt="" />
               </button>
             </div>
 

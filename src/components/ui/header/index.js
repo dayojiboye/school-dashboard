@@ -2,8 +2,9 @@ import React from 'react';
 
 import Input from '../input';
 import Dropdown from '../dropdown';
-import { EnvelopeSvg, BellSvg } from '../../../assets/icons';
-import ParentImg from '../../../assets/images/parent1.jpg';
+import { BellSvg } from '../../../assets/icons';
+import EnvelopeSvg from '../../../assets/images/envelope.png';
+import ParentImg from '../../../assets/images/Image Place Holder.png';
 
 import './styles.scss';
 
@@ -21,7 +22,7 @@ const header = () => {
       <div className="header__actions">
         <div className="mail_notification">
           <button aria-label="mail notifications">
-            <EnvelopeSvg />
+            <img src={EnvelopeSvg} alt="" />
             <span></span>
           </button>
         </div>

@@ -148,10 +148,15 @@
           align-items: center;
           justify-content: center;
 
-          svg {
+          svg,
+          img {
             width: 20px;
             height: 20px;
             flex-shrink: 0;
+          }
+
+          img {
+            object-fit: cover;
           }
         }
       }

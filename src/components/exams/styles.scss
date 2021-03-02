@@ -1,0 +1,267 @@
+.exams {
+  width: var(--full);
+
+  &__heading {
+    width: var(--full);
+
+    h1 {
+      display: inline-block;
+    }
+  }
+
+  &__tab {
+    width: var(--full);
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 565px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    ._left {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 436px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      h2 {
+        margin-right: 35px;
+
+        @media (max-width: 436px) {
+          margin-right: 0;
+          margin-bottom: 16px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .results_tab,
+      .schedules_tab,
+      .promotions_tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &._active {
+          color: var(--dark-green);
+
+          &::after {
+            content: '';
+            background: var(--dark-green);
+            width: var(--full);
+            height: 2px;
+            position: absolute;
+            bottom: -7px;
+          }
+        }
+
+        button {
+          background: transparent;
+          border: 0;
+          padding: 0;
+          cursor: pointer;
+        }
+      }
+    }
+
+    ._right {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 565px) {
+        margin-top: 16px;
+      }
+
+      @media (max-width: 436px) {
+        margin-top: 32px;
+      }
+
+      ._settings_btn,
+      ._plus_btn {
+        width: 40px;
+
+        button {
+          width: var(--full);
+          padding: 10px 0;
+          background: var(--input-fade-bg);
+          border: 0;
+          cursor: pointer;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg,
+          img {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+          }
+
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+
+      ._plus_btn {
+        margin-left: 16px;
+
+        button {
+          background: var(--dark-green);
+
+          svg {
+            fill: var(--white);
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  &__data {
+    width: var(--full);
+    margin-top: 70px;
+
+    .exams_data_actions {
+      width: var(--full);
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      ._left,
+      ._right {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+      }
+
+      .dropdown_wrapper {
+        width: 140px;
+        margin-right: 16px;
+
+        button {
+          width: var(--full);
+          padding: 10px 16px;
+          background: var(--input-fade-bg);
+          border: 0;
+          cursor: pointer;
+          border-radius: var(--border-radius-mini);
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+
+          span {
+            font-size: 0.9rem;
+            font-weight: 600;
+          }
+
+          svg {
+            width: 8px;
+            height: 8px;
+            flex-shrink: 0;
+          }
+        }
+      }
+
+      .data_search {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 230px;
+
+        &::before {
+          content: '';
+          width: 15px;
+          height: 15px;
+          background: url('../../assets/icons/search-interface-symbol2.svg')
+            no-repeat center;
+          background-size: cover;
+          flex-shrink: 0;
+          position: absolute;
+          left: 0;
+        }
+
+        input {
+          padding: 7px 0px 7px 27px;
+          border: 0;
+          width: var(--full);
+          border-bottom: 1px solid var(--fade-secondary);
+
+          &::placeholder {
+            color: var(--fade);
+          }
+        }
+      }
+    }
+
+    .exams_data_content {
+      width: var(--full);
+      display: flex;
+
+      @media (max-width: 659px) {
+        display: block;
+      }
+
+      .exams_active_line {
+        position: relative;
+        background: var(--white);
+        width: 2px;
+        margin-top: 62px;
+        border: var(--fade-secondary) solid 1px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (max-width: 659px) {
+          display: none;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 0;
+          z-index: 1;
+          border-style: solid;
+          border-color: transparent var(--white);
+          border-width: 30px 0 30px 24px;
+          top: 27%;
+          right: -22px;
+          margin-top: -30px;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 0;
+          z-index: 0;
+          border-style: solid;
+          border-color: transparent var(--fade-secondary);
+          border-width: 32px 0 32px 26px;
+          top: 27%;
+          right: -25px;
+          margin-top: -32px;
+          display: block;
+        }
+      }
+    }
+  }
+}

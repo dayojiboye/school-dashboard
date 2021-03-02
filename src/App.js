@@ -10,6 +10,7 @@ import Layout from './layout';
 
 import { HomePage } from './pages/home';
 import { CbtExamsPage } from './pages/cbtExams';
+import { ExamsPage } from './pages/exams';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       <Layout>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/cbt-examination" component={CbtExamsPage} />
+          <Route path="/cbt-examinations" component={CbtExamsPage} />
+          <Route path="/examinations" component={ExamsPage} />
         </Switch>
       </Layout>
     </>
