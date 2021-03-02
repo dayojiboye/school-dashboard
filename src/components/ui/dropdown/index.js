@@ -2,11 +2,14 @@ import React from 'react';
 
 import { ChevronDownSvg } from '../../../assets/icons';
 
-const dropdown = ({ btnText, ...props }) => {
+const dropdown = ({ btnText, children, ...props }) => {
   return (
     <div className="dropdown_wrapper" {...props}>
       <button>
-        <span>{btnText}</span>
+        <span>
+          {children}
+          {btnText}
+        </span>
         <ChevronDownSvg />
       </button>
 

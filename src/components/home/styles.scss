@@ -42,9 +42,23 @@
       .dropdown_wrapper {
         width: 150px;
         margin-right: 16px;
+        position: relative;
 
         &#_filter {
-          width: 100px;
+          button {
+            justify-content: space-around;
+
+            span {
+              img {
+                object-fit: cover;
+                width: 15px;
+                height: 16px;
+                flex-shrink: 0;
+                vertical-align: middle;
+                margin-right: 8px;
+              }
+            }
+          }
         }
 
         button {

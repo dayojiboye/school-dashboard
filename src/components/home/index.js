@@ -5,6 +5,7 @@ import Input from '../ui/input';
 import Table from './table';
 import { PlusSvg } from '../../assets/icons';
 import SettingsSvg from '../../assets/images/gear.png';
+import FilterSvg from '../../assets/images/adjust.png';
 
 import './styles.scss';
 
@@ -32,7 +33,9 @@ const homePage = () => {
           </div>
 
           <div className="_right">
-            <Dropdown btnText="Filter" id="_filter" />
+            <Dropdown btnText="Filter" id="_filter">
+              <img src={FilterSvg} alt="" />
+            </Dropdown>
 
             <div className="_settings_btn">
               <button aria-label="settings">
